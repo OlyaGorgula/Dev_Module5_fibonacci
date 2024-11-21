@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:FibonacciIteration.fibonacci(int n);
+if (n <= 1) then (true)
+:return n;
+stop
+endif
+
+:int i = 2;
+:long number1 = 0;
+:long number2 = 1;
+:long result = 0;
+
+while (i<=n?)
+:result = number1 +number2;
+:number1 = number2;
+:number2 = result;
+:i++;
+endwhile
+
+:return result;
+stop
+@enduml

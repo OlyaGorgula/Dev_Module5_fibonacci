@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:Map<Integer, Long> memo = new HashMap<>();
+
+:FibonacciDP.fibonacci(int n);
+if (n <= 1) then (true)
+:return n;
+stop
+endif
+
+if (memo.containsKey(n)) then (true)
+:return memo.get(n);
+stop
+endif
+
+:long fib = fibonacci(n - 1) + fibonacci(n - 2);
+:memo.put(n, fib);
+:return fib;
+stop
+@enduml

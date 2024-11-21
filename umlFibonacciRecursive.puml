@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:FibonacciRecursive.fibonacci(int n);
+if (n <= 1) then (true)
+:return n;
+stop
+endif
+
+:return fibonacci(n - 1) + fibonacci(n - 2);
+@enduml
